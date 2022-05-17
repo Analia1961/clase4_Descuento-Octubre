@@ -14,19 +14,20 @@ let rotulo1 = document.getElementById("rotulo1");
 let rotulo2 = document.getElementById("rotulo2");
 let rotulo3 = document.getElementById("rotulo3");
 
-rotulo1.innerHTML = "Indique precio";
-rotulo2.innerHTML = "Indique cantidad";
-rotulo3.innerHTML = "Indique mes";
+rotulo1.innerHTML = "Ingresar monto:";
+rotulo2.innerHTML = "Ingresar cantidad:";
+rotulo3.innerHTML = "Ingresar mes:";
 
 let dato1 = document.getElementById("dato1");
 let dato2 = document.getElementById("dato2");
 let dato3 = document.getElementById("dato3");
+
 let btnEnviar = document.getElementById("enviar");
 
 btnEnviar.addEventListener("click", () => {
   let monto: number = Number(dato1.value);
   let cantidad: number = Number(dato2.value);
-  let mes: string = Number(dato3.value);
+  let mes: string = dato3.value;
 
   let precioTotal: number = monto * cantidad;
 
@@ -41,3 +42,10 @@ btnEnviar.addEventListener("click", () => {
   }
   console.log("El precio total es ", precioTotal);
 });
+
+// Este ejercicio presenta una dificultad y no aplica el descuento
+
+/*
+Revisado en CodeSandbox - Repositorio prof. Daniel Tonemlli
+https://codesandbox.io/s/github/daniel-tonelli/Repositorio
+*/
